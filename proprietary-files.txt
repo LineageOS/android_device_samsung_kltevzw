@@ -14,7 +14,6 @@ vendor/lib/liblbs_core.so
 vendor/lib/liblocationservice.so
 
 # NFC
-lib/hw/nfc_nci.MSM8974.so:lib/hw/nfc_nci.msm8974.so
 vendor/firmware/bcm2079xB4_firmware.ncd
 vendor/firmware/bcm2079xB4_pre_firmware.ncd
 vendor/firmware/bcm2079xB5_firmware.ncd
