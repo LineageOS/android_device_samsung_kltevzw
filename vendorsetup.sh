@@ -1,2 +1,2 @@
-add_lunch_combo cm_klte-eng
+add_lunch_combo cm_kltespr-eng
 
