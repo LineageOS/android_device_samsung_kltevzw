@@ -54,15 +54,15 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     property_get("ro.bootloader", bootloader);
 
-    if (strstr(bootloader, "G900P")) {
-        /* kltespr */
-        property_set("ro.build.fingerprint", "samsung/kltespr/kltespr:4.4.2/KOT49H/G900PVPU1ANCB:user/release-keys");
-        property_set("ro.build.description", "kltespr-user 4.4.2 KOT49H G900PVPU1ANCB release-keys");
-        property_set("ro.product.model", "SM-G900P");
-        property_set("ro.product.device", "kltespr");
-        cdma_properties("1", "310120", "Sprint");
+    if (strstr(bootloader, "G900V")) {
+        /* kltevzw */
+        property_set("ro.build.fingerprint", "samsung/kltevzw/kltevzw:4.4.2/KOT49H/G900VVRU1ANE9:user/release-keys");
+        property_set("ro.build.description", "kltevzw-user 4.4.2 KOT49H G900VVRU1ANE9 release-keys");
+        property_set("ro.product.model", "SM-G900V");
+        property_set("ro.product.device", "kltevzw");
+        cdma_properties("1", "310120", "Verizon");
     }
-    /* TODO: Add Sprint MVNOs */
+    /* TODO: Add Verizon MVNOs */
 
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
