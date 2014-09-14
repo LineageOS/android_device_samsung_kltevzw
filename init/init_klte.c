@@ -56,11 +56,11 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     if (strstr(bootloader, "G900V")) {
         /* kltevzw */
-        property_set("ro.build.fingerprint", "samsung/kltevzw/kltevzw:4.4.2/KOT49H/G900VVRU1ANE9:user/release-keys");
+        property_set("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:4.4.2/KOT49H/G900VVRU1ANE9:user/release-keys");
         property_set("ro.build.description", "kltevzw-user 4.4.2 KOT49H G900VVRU1ANE9 release-keys");
         property_set("ro.product.model", "SM-G900V");
         property_set("ro.product.device", "kltevzw");
-        cdma_properties("1", "310120", "Verizon");
+        cdma_properties("0", "311480", "Verizon");
     }
     /* TODO: Add Verizon MVNOs */
 
