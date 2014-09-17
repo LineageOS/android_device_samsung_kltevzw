@@ -14,10 +14,7 @@ vendor/lib/liblbs_core.so
 vendor/lib/liblocationservice.so
 
 # NFC
-vendor/firmware/bcm2079xB4_firmware.ncd
-vendor/firmware/bcm2079xB4_pre_firmware.ncd
-vendor/firmware/bcm2079xB5_firmware.ncd
-vendor/firmware/bcm2079xB5_pre_firmware.ncd
+vendor/firmware/libpn547_fw.so
 
 # Qualcomm framework
 vendor/lib/libdiag.so
