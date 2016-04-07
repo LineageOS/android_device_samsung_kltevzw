@@ -15,7 +15,7 @@
 # inherit from common klte
 -include device/samsung/klte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := kltevzw
+TARGET_OTA_ASSERT_DEVICE := kltevzw,klte
 
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_vzw_defconfig
@@ -31,8 +31,8 @@ BOARD_NFC_CHIPSET := pn547
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2831155200
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 12187581440
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3145728000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 11334040576
 
 # inherit from the proprietary version
 -include vendor/samsung/kltevzw/BoardConfigVendor.mk
