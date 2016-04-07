@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_vzw_defconfig
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/kltevzw/init/init_klte.c
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/kltevzw/init/init_klte.cpp
 TARGET_UNIFIED_DEVICE := true
 
 # NFC
