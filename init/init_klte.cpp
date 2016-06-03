@@ -68,8 +68,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     if (strstr(bootloader, "G900V")) {
         /* kltevzw - SM-G900V - Verizon */
-        property_set("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:5.0/LRX21T/G900VVRU2BPB1:user/release-keys");
-        property_set("ro.build.description", "kltevzw-user 5.0 LRX21T G900VVRU2BPB1 release-keys");
+        property_set("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:6.0.1/MMB29M/G900VVRU2DPD1:user/release-keys");
+        property_set("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRU2DPD1 release-keys");
         property_set("ro.product.model", "SM-G900V");
         property_set("ro.product.device", "kltevzw");
         cdma_properties("0", "311480", "Verizon");
