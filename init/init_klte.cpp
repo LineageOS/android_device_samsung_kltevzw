@@ -37,8 +37,6 @@
 
 #include "init_msm8974.h"
 
-#define ISMATCH(a, b) (!strncmp((a), (b), PROP_VALUE_MAX))
-
 void cdma_properties(char const *default_cdma_sub,
         char const *operator_numeric, char const *operator_alpha)
 {
@@ -51,21 +49,16 @@ void cdma_properties(char const *default_cdma_sub,
     property_set("telephony.lteOnCdmaDevice", "1");
 }
 
+
 void init_target_properties()
 {
-    char platform[PROP_VALUE_MAX];
-    char bootloader[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char devicename[PROP_VALUE_MAX];
-    int rc;
-
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
+    std::string platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
         return;
 
-    property_get("ro.bootloader", bootloader);
+    std::string bootloader = property_get("ro.bootloader");
 
-    if (strstr(bootloader, "G900V")) {
+    if (bootloader.find("G900V") == 0) {
         /* kltevzw - SM-G900V - Verizon */
         property_set("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:6.0.1/MMB29M/G900VVRU2DPF4:user/release-keys");
         property_set("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRU2DPF4 release-keys");
@@ -73,7 +66,7 @@ void init_target_properties()
         property_set("ro.product.device", "kltevzw");
         cdma_properties("0", "311480", "Verizon");
     }
-    else if (strstr(bootloader, "S902L")) {
+    else if (bootloader.find("S902L") == 0) {
         /* kltetfnvzw - SM-S902L - TracFone Verizon MVNO */
         property_set("ro.build.fingerprint", "samsung/kltetfnvzw/kltetfnvzw:4.4.2/KOT49H/S902LUDUAOD3:user/release-keys");
         property_set("ro.build.description", "kltetfnvzw-user 4.4.2 KOT49H S902LUDUAOD3 release-keys");
@@ -82,7 +75,6 @@ void init_target_properties()
         cdma_properties("0", "310000", "TracFone");
     }
 
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
+    std::string device = property_get("ro.product.device");
+    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
 }
