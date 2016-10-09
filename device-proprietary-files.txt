@@ -1,7 +1,3 @@
-# Bluetooth firmware
-vendor/firmware/bcm4350_V0375.0766_wisol.hcd
-vendor/firmware/bcm4350_V0375.0768.hcd
-
 # GPS
 etc/clatd.conf
 etc/gps.conf
